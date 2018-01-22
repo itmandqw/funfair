@@ -1,0 +1,252 @@
+body{
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background: url("../images/background.png") no-repeat 50%;
+    background-size: cover;
+}
+h4{
+    font-size: 16px;
+}
+.wrapper {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+}
+
+.wrapper .back{
+    position: absolute;
+    left: 2%;
+    top: 1%;
+    width: 30px;
+    height:30px;
+    cursor: pointer;
+}
+.back img{
+    width: 100%;
+}
+
+
+/*倒计时*/
+.wrapper .time_left{
+    display: none;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 5%;
+    color: #fff;
+}
+.time_left h4{
+    display: inline-block;
+    line-height: 100px;
+    float: left;
+    font-size: 14px;
+}
+.time_left .time_wrap{
+    float: left;
+    margin-top: 33px;
+}
+.time_left .time_wrap .times{
+    float: left;
+    margin-left: 10px;
+}
+.time_left .time_wrap .times span{
+    display: block;
+    width:46px;
+    height:41px;
+    background: url("../images/daojishi.png") no-repeat center 100%/100%;
+    text-align: center;
+    line-height:41px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.time_left .time_wrap .times p{
+    text-align: center;
+}
+
+/*赢得活动奖励*/
+.wrapper .win{
+    display: none;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20%;
+    position: relative;
+}
+.win .success{
+    display: block;
+    width: 77px;
+    height: 77px;
+    background: url("../images/win1.png") no-repeat ;
+    background-size: cover;
+    position: absolute;
+    top: -52%;
+}
+.win .layer1{
+    padding: 3% 0;
+    width: 100%;
+    background: rgba(0,0,0, .3);
+    border-radius: 6px;
+}
+.win .layer1 p{
+    text-indent: 4em;
+    font-size: 16px;
+    padding: 0 3%;
+}
+.win .layer1 p i{
+    font-style: normal;
+    font-size: 14px;
+}
+
+
+/*挑战失败*/
+.wrapper .lose{
+    display: none;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20%;
+    position: relative;
+}
+.lose .fail{
+    width: 77px;
+    height: 77px;
+    background: url("../images/fail1.png") no-repeat ;
+    background-size: cover;
+    position: absolute;
+    top: -50%;
+    left: 2%;
+}
+.lose .layer2{
+    padding: 3% 0;
+    width: 100%;
+    background: rgba(0,0,0, .3);
+    border-radius: 6px;
+}
+.lose .layer2 p{
+    text-indent: 4em;
+    font-size: 16px;
+    padding: 0 3%;
+}
+.lose .layer2 p i{
+    font-style: normal;
+    font-size: 14px;
+}
+
+/*文字区域*/
+.wrapper .text_explain{
+    width: 90%;
+    margin: 10px 5%;
+}
+.text_explain h4{
+    font-weight: 500;
+    line-height:36px;
+}
+.text_explain p{
+    line-height:22px;
+}
+.text_explain p i{
+    font-style: normal;
+    font-weight: 700;
+}
+.text_explain .content{
+    margin-bottom: 10px;
+}
+
+/*表格区域*/
+.wrapper .act_detail{
+    width:90%;
+    margin-left: 5%;
+    color: #f1fbf3;
+}
+.act_detail table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.act_detail td,
+.act_detail th{
+    border: 1px solid #fee643;
+    line-height: 33px;
+    text-align: center;
+}
+
+/*创建足迹流程*/
+.wrapper .create_ways{
+    width: 100%;
+    margin-top: 10px;
+}
+.create_ways h4{
+    width: 90%;
+    margin-left: 5%;
+    font-weight:500;
+    line-height:36px;
+}
+.create_ways img{
+    width: 100%;
+    display: block;
+}
+
+/*创建足迹*/
+.wrapper .create_mood{
+    background: #930100;
+    color: #fff;
+    width: 40%;
+    margin: 10px 30%;
+    border: none;
+    line-height:44px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.create_mood span{
+    font-size: 14px;
+}
+
+/*解释权*/
+.explain_right{
+    text-align: center;
+    color: #8f0205;
+}
+
+/*未登录用户弹窗提示*/
+.prompt{
+    display: none;
+    z-index: 999;
+    width: 85%;
+    height: 114px;
+    background: rgba(58, 11, 11, 0.9);
+    border-radius: 5px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.prompt .close1{
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 26px;
+    text-align: center;
+    line-height: 20px;
+}
+.prompt .message{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 53%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.prompt p{
+    color: aliceblue;
+}

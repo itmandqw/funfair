@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>暖冬流量到底有多赞</title>
+    <link rel="stylesheet" href="../../../bs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../bs/css/base.css">
+    <link rel="stylesheet" href="../css/collect_likes.css">
+</head>
+<body ng-app="collectLikes">
+    <div class="wrapper" ng-controller="collectLikesCtrl">
+        <div class="back" ng-click="back()">
+            <span><img src="../images/back.png"></span>
+        </div>
+        <!--显示倒计时-->
+        <div class="time_left clearfix"  id="timing">
+            <h4>距离活动开始还有:</h4>
+            <div class="time_wrap" >
+                <div class="times">
+                    <span id="days"></span>
+                    <p>Days</p>
+                </div>
+                <div class="times">
+                    <span id="hours"></span>
+                    <p>Hours</p>
+                </div>
+                <div class="times">
+                    <span id="mins"></span>
+                    <p>Mins</p>
+                </div>
+            </div>
+        </div>
+
+        <!--达到活动要求，显示活动领取奖项-->
+        <div class="win" id="win">
+            <span class="success"></span>
+            <div class="layer1">
+                <p>通知：恭喜您完成任务！获得赞数：{{num}}，活动奖品{{prize}}。
+                    <i>（如有疑问请可咨询400客服，电话：4008558686）</i>
+                </p>
+            </div>
+        </div>
+
+        <!--挑战失败-->
+        <div class="lose" id="lose">
+            <span class="fail"></span>
+            <div class="layer2">
+                <p>通知：很抱歉，您挑战失败！请关注后续活动。
+                    <i>（如有疑问请可咨询400客服，电话：4008558686）</i>
+                </p>
+            </div>
+        </div>
+
+        <div class="text_explain">
+            <div class="content">
+                <h4>活动内容：</h4>
+                <p>自2018年2月15日00:00:00-2018年2月23日00:00:00,在游伴伴APP上 <i>发布足迹</i> ，当该篇
+                    足迹获得赞数达到30个以上，则可获得奖励！赶紧拉动周围的小伙伴一起参与吧，更有
+                    机会获得积分奖励，兑换其他国外流量哦~~</p>
+            </div>
+            <div class="rules">
+                <h4>活动规则：</h4>
+                <p>2月23日-3月22日出行租赁游伴伴设备的用户均可参与，凡是在此时间出行的用户，于2月
+                    15日-2月22日在游伴伴APP上 <i>发布足迹</i> （若用户发布多条足迹，取点赞数目最高），在
+                    APP中进行集赞活动，集赞数量越多，可获得越多国内流量，（PS:注意注意，APP注册
+                    账户必须与下单账户为同一个哦，否则无效哦）</p>
+            </div>
+        </div>
+
+        <div class="act_detail">
+            <table>
+                <thead>
+                    <th>集赞数目</th>
+                    <th>免费国内流量天数</th>
+                    <th>价值</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>30</td>
+                        <td>30</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>50</td>
+                        <td>60</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>150</td>
+                        <td>90</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&ge;300</td>
+                        <td>180</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="create_ways">
+            <h4>创建足迹流程:</h4>
+            <img src="../images/flow.png" alt="流程">
+        </div>
+
+        <div>
+            <button type="button" class="create_mood" ng-click = "creat_mood()" ng-show="isLogin&&timing">
+                <span class="glyphicon glyphicon-plus"></span>
+                创建足迹
+            </button>
+        </div>
+
+        <footer>
+            <p class="explain_right">本次活动最终解释权归游伴伴所有</p>
+        </footer>
+
+        <!--未登录用户弹框提示-->
+        <div id="prompt" class="prompt">
+            <span class="close1" ng-click = "close1()">&times;</span>
+            <div class="message">
+                <p>请在APP中登录后参与活动！</p>
+            </div>
+        </div>
+        <!--网络请求错误提示用户-->
+        <div id="busy" class="prompt">
+            <span class="close1" ng-click = "close2()">&times;</span>
+            <div class="message">
+                <p>网络繁忙，请稍后重试！</p>
+            </div>
+        </div>
+    </div>
+    <script src="../../../bs/jquery/dist/jquery.js"></script>
+    <script src="../../../bs/angular/angular.js"></script>
+    <script src="../js/collect_likes.js"></script>
+</body>
+</html>

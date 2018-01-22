@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+<title>赢积分，换流量</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/lotto.css">
+</head>
+<body>
+<div class="container">
+    <!--头部关键信息-->
+    <div class="main_header">
+        <a href="javascript:;" class="back"><img src="../images/back2X.png" alt="返回"></a>
+        <p class="description">游伴伴自上线以来，即受到旅游达人的喜爱。至此即将迎来新年之际，为回馈广大用户，凡2018年1月22日--2018年2月7日，登陆游伴伴APP的各位驴友们，即有机会赢取积分兑换流量。
+            与此同时，完成游伴伴APP中每日指定任务，领取更多积分。
+        </p>
+        <p class="chance">当日抽奖机会 <span class="coud_num"></span> 次</p>
+    </div>
+    <!--转盘部分-->
+    <div class="main_body">
+        <img src="../images/zhuanpan2X.png" alt="转盘" id="img" class="zhuanpan">
+        <img src="../images/timing2X.png" alt="抽奖按钮" id="tip" class="point">
+    </div>
+    <!--中奖信息提示弹出框-->
+    <!--500积分-->
+    <div id="apply1" class="modal fade padding1" tabindex="-1" data-replace="true" data-backdrop="static">
+        <div class="modal-dialog modal-content">
+            <div class="modal-body">
+                <div class="wrapper1">
+                    <a href="#" class="colse1" data-dismiss="modal"><img src="../images/close2X.png" alt="关闭"></a>
+                    <div class="message">
+                        <p><span>中奖提示：恭喜您，500积分已存入您的个人积分中心！</span></p>
+                        <button type="button" class="but5" data-dismiss="modal" data-toggle="modal"><img
+                                src="../images/iknow2X.png" alt ="我知道了"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1000积分-->
+        <div id="apply2" class="modal fade padding1" tabindex="-1" data-replace="true" data-backdrop="static">
+            <div class="modal-dialog modal-content">
+                <div class="modal-body">
+                    <div class="wrapper1">
+                        <a href="#" class="colse1" data-dismiss="modal"><img src="../images/close2X.png" alt="关闭"></a>
+                        <div class="message">
+                            <p><span>中奖提示：恭喜您，1000积分已存入您的个人积分中心！</span></p>
+                            <button type="button" class="but5" data-dismiss="modal" data-toggle="modal"><img
+                                    src="../images/iknow2X.png" alt ="我知道了"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2000积分-->
+        <div id="apply3" class="modal fade padding1" tabindex="-1" data-replace="true" data-backdrop="static">
+            <div class="modal-dialog modal-content">
+                <div class="modal-body">
+                    <div class="wrapper1">
+                        <a href="#" class="colse1" data-dismiss="modal"><img src="../images/close2X.png" alt="关闭"></a>
+                        <div class="message">
+                            <p><span>中奖提示：恭喜您，2000积分已存入您的个人积分中心！</span></p>
+                            <button type="button" class="but5" data-dismiss="modal" data-toggle="modal"><img
+                                    src="../images/iknow2X.png" alt ="我知道了"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--未中奖-->
+        <div id="apply4" class="modal fade padding1" tabindex="-1" data-replace="true" data-backdrop="static">
+            <div class="modal-dialog modal-content">
+                <div class="modal-body">
+                    <div class="wrapper2">
+                        <a href="#" class="colse1" data-dismiss="modal"><img src="../images/close2X.png" alt=""></a>
+                        <div class="message">
+                            <p><span>未中奖提示：继续加油，再接再厉！</span></p>
+                            <button type="button" class="but5" data-dismiss="modal" data-toggle="modal"><img
+                                    src="../images/iknow2X.png" alt ="我知道了"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--机会用完-->
+        <div id="apply5" class="modal fade padding1" tabindex="-1" data-replace="true" data-backdrop="static">
+            <div class="modal-dialog modal-content">
+                <div class="modal-body out_of_chance">
+                    <div class="mess"></div>
+                    <a href="#" class="close2" data-dismiss="modal">
+                        亲，今日活动次数用完，明天继续哦~
+                    </a>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/lotto.js"></script>
+</body>
+</html>

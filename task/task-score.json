@@ -1,0 +1,14 @@
+{
+	"code": "200",
+	"message": "成功调用",
+	"lists": {
+		"checkin": 5,
+		"share": 15,
+		"read": 5,
+		"createMood": 10,
+		"moodAccepted": 200,
+		"finishProfile": 100,
+		"bindWeixin": 100,
+		"followWeixin": 100
+	}
+}

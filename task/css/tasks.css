@@ -1,0 +1,307 @@
+.main_title{
+    border-bottom: 2px solid #ededed;
+    margin-bottom: 10px;
+    position: relative;
+}
+.main_title span{
+    position: absolute;
+    left: 3%;
+    top: 0;
+    z-index: 9;
+}
+ p {
+  font-size: 12px;
+  margin-top: 5px;
+  padding-left: 3%;
+}
+
+.rules i {
+  font-weight: 400;
+  font-style: normal;
+}
+
+ h3 {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  margin: 15px 0;
+  position: relative;
+}
+
+ table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+th {
+  background-color: #000000;
+  color: #ffed80;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #000;
+  font-size: 12px;
+}
+td {
+  background-color: #fef9cf;
+  border: 1px solid #000;
+  padding: 0 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+td p{
+    margin-top: 12px;
+}
+ .rules tr td:nth-child(1) {
+  font-size: 12px;
+  width: 30%;
+  padding-left: 8.5%;
+  font-weight: 700;
+  background: 4% 45%/23% no-repeat #fef9cf;
+}
+
+ .rules tr td:nth-child(3) {
+  font-size: 10px;
+  line-height: 16px;
+  padding: 5px 8px;
+}
+
+.rules tr td:nth-child(2) {
+  width: 16%;
+  text-align: center;
+}
+
+.rules tr td:nth-child(4) {
+  width: 20%;
+  font-size: 11px;
+}
+
+ .rules td.complete {
+  background: url('../images/task_ok@3x.png') center/55% no-repeat #fef9cf;
+}
+
+ .rules button {
+  background-color: #fee560;
+  border-radius: 5px;
+  /*height: 25px;*/
+  line-height: 28px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+
+ .complete button {
+  display: none;
+}
+
+/* .exchange {*/
+  /*margin-top: 40px;*/
+/*}*/
+
+/*.exchange th {*/
+  /*text-align: left;*/
+  /*padding-left: 10px;*/
+/*}*/
+
+/*.exchange td {*/
+  /*height: 50px;*/
+  /*padding-left: 10px;*/
+  /*line-height: 50px;*/
+  /*font-size: 12px;*/
+/*}*/
+
+/*.exchange tr td:first-child {*/
+  /*font-weight: 700;*/
+/*}*/
+
+/*.more-exchange {*/
+  /*margin: 40px 0 40px;*/
+/*}*/
+
+/*.more-exchange .hot-commodity {*/
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+  /*height: 80px;*/
+/*}*/
+
+.hot-commodity div {
+  width: 32%;
+  background-color: pink;
+}
+
+.popup-container.signInSuccess p:first-child {
+  color: #fff250;
+  font-weight: 700;
+}
+
+.popup-container.signInSuccess .popup-body {
+  padding-left: 90px;
+  background: url('../images/qiandao_ok@3x.png') 25px 2px/22% no-repeat;
+}
+
+.popup-container.follow p {
+  text-align: center;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.popup-container.follow i {
+  color: #fff250;
+}
+
+.daily tr:nth-child(2) td:first-child {
+  background-image: url("../images/qiandao@3x.png")
+}
+
+.daily tr:nth-child(3) td:first-child {
+  background-image: url("../images/fenxiang@3x.png")
+}
+
+.daily tr:nth-child(4) td:first-child {
+  background-image: url("../images/yuedu@3x.png")
+}
+
+.daily tr:nth-child(5) td:first-child {
+  background-image: url("../images/chuangjian@3x.png")
+}
+
+ .long-term tr:nth-child(2) td:first-child {
+  background-image: url("../images/yinyong@3x.png")
+}
+
+.growing tr:nth-child(2) td:first-child {
+  background-image: url("../images/wanshan@3x.png")
+}
+
+.growing tr:nth-child(3) td:first-child {
+  background-image: url("../images/bangding@3x.png")
+}
+
+.growing tr:nth-child(4) td:first-child {
+  background-image: url("../images/guanzhu@3x.png")
+}
+
+.more-exchange h3::after {
+  position: absolute;
+  right: 0;
+  font-weight: 400;
+  content: '更多 >'
+}
+
+.exchanging{
+  width: 100%;
+}
+.exchanging button{
+  width: 50%;
+  height: 30px;
+  margin-left: 25%;
+  margin-top: 15px;
+}
+
+/*签到弹出框*/
+#myModal{
+  display: none;
+  width: 70%;
+  height: 120px;
+  background: rgba(0,0,0, .9);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+#myModal .close1{
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 26px;
+    text-align: center;
+    line-height: 20px;
+}
+#myModal img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 12%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+#myModal .message{
+    position: absolute;
+    width: 60%;
+    left: 36%;
+    top: 53%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#myModal p{
+  color: aliceblue;
+}
+#myModal p:first-child{
+    color: #fee560;
+    font-size: 14px;
+}
+
+/*签到失败弹出框*/
+
+.prompt{
+    display: none;
+    width: 85%;
+    height: 130px;
+    background: rgba(0,0,0, .9);
+    border-radius: 5px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.prompt .close1{
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 26px;
+    text-align: center;
+    line-height: 20px;
+}
+.prompt .message{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 53%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.prompt p{
+    color: aliceblue;
+}

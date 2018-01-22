@@ -1,0 +1,14 @@
+{
+	"code": "200",
+	"message": "",
+	"lists": {
+		"checkin": false,
+		"share": true,
+		"read": false,
+		"createMood": false,
+		"moodAccepted": 1,
+		"finishProfile": false,
+		"bindWeixin": true,
+		"followWeixin": true
+	}
+}

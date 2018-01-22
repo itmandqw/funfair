@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="../bs/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/tasks.css">
+  <title>每日任务</title>
+</head>
+<body ng-app="myApp">
+  <div ng-controller = 'TaskCtrl'>
+    <div class="main_title">
+      <span class="glyphicon glyphicon-menu-left" ng-click="back()"></span>
+      <h3>任务与积分</h3>
+    </div>
+    <p>拥有积分后您可以通过积分进行流量、移动wifi设备等奖品兑换和抵扣，后续游伴伴还将逐步推出个人装扮系列，欢迎持续关注哦~</p>
+
+    <!--每日任务-->
+    <div class="rules daily">
+      <h3>每日任务 · <i>积分规则</i></h3>
+      <table>
+        <tr>
+          <th>操作</th>
+          <th>积分</th>
+          <th>操作说明</th>
+          <th>状态</th>
+        </tr>
+        <tr>
+          <td>签到</td>
+          <td>{{ score.checkin }}分</td>
+          <td>日常任务，每日可获得一次积分</td>
+          <td ng-class="{complete: status.checkin}">
+            <button ng-click="signIn()">签到</button>
+          </td>
+        </tr>
+        <tr>
+          <td>分享内容</td>
+          <td>{{score.share}}分</td>
+          <td>日常任务，每日可获得一次积分</td>
+          <td ng-class="{complete: status.share}">
+            <p ng-if = "!status.share">未完成</p>
+          </td>
+        </tr>
+        <tr>
+          <td>阅读1条内容</td>
+          <td>{{score.read}}分</td>
+          <td>日常任务，每日可获得二次积分</td>
+          <td ng-class="{complete: status.read}">
+            <p ng-if = "!status.read">未完成</p>
+          </td>
+        </tr>
+        <tr>
+          <td>创建1篇足迹</td>
+          <td>{{score.createMood}}分</td>
+          <td>日常任务，每日可获得一次积分</td>
+          <td ng-class="{complete: status.createMood}">
+            <button ng-click =  "createMood()">创建</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!--长期任务-->
+    <div class="rules long-term">
+      <h3>长期任务 · <i>积分规则</i></h3>
+      <table>
+        <tr>
+          <th>操作</th>
+          <th>积分</th>
+          <th>操作说明</th>
+          <th>状态</th>
+        </tr>
+        <tr>
+          <td>足迹被引用</td>
+          <td>{{score.moodAccepted}}分</td>
+          <td>足迹被游伴伴引用，每篇可获相应积分奖励</td>
+          <td>
+            <p ng-if = 'status.moodAccepted === 0'>暂未被引用</p>
+            <p ng-if = 'status.moodAccepted !== 0' style="color: #f94d1e; font-size: 14px;font-weight: 700;">引用{{status.moodAccepted}}篇 +&nbsp;{{score.moodAccepted * status.moodAccepted}}</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--成长任务-->
+    <div class="rules growing">
+      <h3>成长任务 · <i>积分规则</i></h3>
+      <table>
+        <tr>
+          <th>操作</th>
+          <th>积分</th>
+          <th>操作说明</th>
+          <th>状态</th>
+        </tr>
+        <tr>
+          <td>完善个人信息</td>
+          <td>{{score.finishProfile}}分</td>
+          <td>将昵称、头像、性别等信息填写完整并保存</td>
+          <td ng-class="{complete: status.finishProfile}">
+            <button ng-click = "finishProfile()">填写</button>
+          </td>
+        </tr>
+        <tr>
+          <td>绑定微信</td>
+          <td>{{score.bindWeixin}}分</td>
+          <td>绑定微信，单个账号只进行一次计算</td>
+          <td ng-class="{complete: status.bindWeixin}">
+            <button ng-click = "bindWeixin()">绑定</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="rules exchanging">
+      <button ng-click = "exchanging()">积分兑换，GO!</button>
+    </div>
+
+
+    <!--签到-->
+    <div id="myModal">
+      <span class="close1" ng-click = "close1()">&times;</span>
+      <span><img src="images/qiandao_ok@3x.png"></span>
+      <div class="message">
+        <p>签到成功,+5分！</p>
+        <p>明天别忘再来哦~</p>
+      </div>
+    </div>
+
+    <!--签到失败提示-->
+    <div id="fail" class="prompt">
+      <span class="close1" ng-click = "close3()">&times;</span>
+      <div class="message">
+        <p>签到失败，请检查您的网络后重试</p>
+      </div>
+    </div>
+
+    <!--检测到未登录提示用户-->
+    <div id="attention" class="prompt">
+      <span class="close1" ng-click = "close2()">&times;</span>
+      <div class="message">
+        <p>请在APP中登录后打开</p>
+      </div>
+    </div>
+
+    <!--服务器请求数据错误-->
+    <div id="wrong" class="prompt">
+      <span class="close1" ng-click = "close4()">&times;</span>
+      <div class="message">
+        <p>服务器内部错误，请稍后重试</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="../bs/angular/angular.min.js"></script>
+<script src="./js/tasks.js"></script>
+</html>

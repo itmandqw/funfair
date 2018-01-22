@@ -1,0 +1,7 @@
+{
+  "lists":[
+    {"id":"1","src":"./activity_list/images/zhuanpan2X.png"},
+    {"id":"2","src":"./activity_list/images/timeout2X.png"},
+    {"id":"3","src":"./activity_list/images/background.jpg"}
+  ]
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../bs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bs/css/base.css">
+    <link rel="stylesheet" href="./activity_list/css/list.css">
+    <title>活动列表</title>
+</head>
+<body ng-app = "listApp">
+    <div class="wrapper" ng-controller="listCtrl">
+        <header class="header">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+            <span>游伴伴官方活动列表</span>
+        </header>
+        <div class="content">
+            <ul>
+                <li ng-repeat="src in imginfo">
+                    <a href="#" ng-click = "join_act()"><img ng-src="{{src.src}}"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <script src="../bs/js/router.js"></script>
+    <script src="../bs/angular/angular.js"></script>
+    <script src="activity_list/js/list.js"></script>
+</body>
+</html>
