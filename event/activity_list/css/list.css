@@ -46,3 +46,50 @@ body{
     display: block;
     height:120px;
 }
+
+
+
+/*未登录用户弹窗提示*/
+.prompt{
+    z-index: 999;
+    width: 85%;
+    height: 114px;
+    background: rgba(58, 11, 11, 0.9);
+    border-radius: 5px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.prompt .close1{
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 26px;
+    text-align: center;
+    line-height: 20px;
+}
+.prompt .message{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 53%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.prompt p{
+    color: aliceblue;
+}

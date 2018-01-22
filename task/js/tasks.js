@@ -97,12 +97,6 @@ angular.module('myApp',[])
           releaseBtn();
       }
 
-      // 点击返回首页
-      $scope.back = function(){
-          window.location.href="about:blank";
-          window.close();
-      }
-
       $scope.close2 = function(){
           window.location.href="about:blank";
           window.close();

@@ -9,10 +9,6 @@
 </head>
 <body ng-app="myApp">
   <div ng-controller = 'TaskCtrl'>
-    <div class="main_title">
-      <span class="glyphicon glyphicon-menu-left" ng-click="back()"></span>
-      <h3>任务与积分</h3>
-    </div>
     <p>拥有积分后您可以通过积分进行流量、移动wifi设备等奖品兑换和抵扣，后续游伴伴还将逐步推出个人装扮系列，欢迎持续关注哦~</p>
 
     <!--每日任务-->
@@ -44,7 +40,7 @@
         <tr>
           <td>阅读1条内容</td>
           <td>{{score.read}}分</td>
-          <td>日常任务，每日可获得二次积分</td>
+          <td>日常任务，每日可获得一次积分</td>
           <td ng-class="{complete: status.read}">
             <p ng-if = "!status.read">未完成</p>
           </td>
@@ -54,7 +50,7 @@
           <td>{{score.createMood}}分</td>
           <td>日常任务，每日可获得一次积分</td>
           <td ng-class="{complete: status.createMood}">
-            <button ng-click =  "createMood()">创建</button>
+            <button ng-click = "createMood()">创建</button>
           </td>
         </tr>
       </table>

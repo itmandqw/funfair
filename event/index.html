@@ -18,10 +18,22 @@
         </header>
         <div class="content">
             <ul>
-                <li ng-repeat="src in imginfo">
-                    <a href="#" ng-click = "join_act()"><img ng-src="{{src.src}}"></a>
+                <li ng-repeat="m in List">
+                    <a href="#" ng-click = "join_act(m)"><img ng-src="img(m)"></a>
                 </li>
             </ul>
+        </div>
+        <div id="prompt" class="prompt" ng-if="!isLogin">
+            <span class="close1" ng-click = "close1()">&times;</span>
+            <div class="message">
+                <p>请在APP中登录后参与活动！</p>
+            </div>
+        </div>
+        <div id="wrong" class="prompt" ng-if="err">
+            <span class="close1" ng-click = "close1()">&times;</span>
+            <div class="message">
+                <p>请检查您的网络~~</p>
+            </div>
         </div>
     </div>
      <script src="../bs/js/router.js"></script>

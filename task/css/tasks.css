@@ -1,14 +1,4 @@
-.main_title{
-    border-bottom: 2px solid #ededed;
-    margin-bottom: 10px;
-    position: relative;
-}
-.main_title span{
-    position: absolute;
-    left: 3%;
-    top: 0;
-    z-index: 9;
-}
+
  p {
   font-size: 12px;
   margin-top: 5px;
@@ -93,36 +83,6 @@ td p{
  .complete button {
   display: none;
 }
-
-/* .exchange {*/
-  /*margin-top: 40px;*/
-/*}*/
-
-/*.exchange th {*/
-  /*text-align: left;*/
-  /*padding-left: 10px;*/
-/*}*/
-
-/*.exchange td {*/
-  /*height: 50px;*/
-  /*padding-left: 10px;*/
-  /*line-height: 50px;*/
-  /*font-size: 12px;*/
-/*}*/
-
-/*.exchange tr td:first-child {*/
-  /*font-weight: 700;*/
-/*}*/
-
-/*.more-exchange {*/
-  /*margin: 40px 0 40px;*/
-/*}*/
-
-/*.more-exchange .hot-commodity {*/
-  /*display: flex;*/
-  /*justify-content: space-between;*/
-  /*height: 80px;*/
-/*}*/
 
 .hot-commodity div {
   width: 32%;

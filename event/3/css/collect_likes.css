@@ -29,7 +29,6 @@ h4{
 
 /*倒计时*/
 .wrapper .time_left{
-    display: none;
     width: 90%;
     margin-top: 10px;
     margin-left: 5%;
@@ -65,7 +64,6 @@ h4{
 
 /*赢得活动奖励*/
 .wrapper .win{
-    display: none;
     width: 90%;
     margin-left: 5%;
     margin-top: 20%;
@@ -207,7 +205,6 @@ h4{
 
 /*未登录用户弹窗提示*/
 .prompt{
-    display: none;
     z-index: 999;
     width: 85%;
     height: 114px;
