@@ -12,11 +12,8 @@
 </head>
 <body ng-app="collectLikes">
     <div class="wrapper" ng-controller="collectLikesCtrl">
-        <div class="back" ng-click="back()">
-            <span><img src="../images/back.png"></span>
-        </div>
         <!--显示倒计时-->
-        <div class="time_left clearfix" ng-if="timebefore">
+        <div class="time_left clearfix ng-cloak" ng-if="timebefore">
             <h4>距离活动开始还有:</h4>
             <div class="time_wrap" >
                 <div class="times">
@@ -35,7 +32,7 @@
         </div>
 
         <!--达到活动要求，显示活动领取奖项-->
-        <div class="win" id="win" ng-if="win">
+        <div class="win ng-cloak" id="win" ng-if="win">
             <span class="success"></span>
             <div class="layer1">
                 <p>通知：恭喜您完成任务！获得赞数：{{num}}，活动奖品{{prize}}。
@@ -45,7 +42,7 @@
         </div>
 
         <!--挑战失败-->
-        <div class="lose" id="lose">
+        <div class="lose ng-cloak" id="lose">
             <span class="fail"></span>
             <div class="layer2">
                 <p>通知：很抱歉，您挑战失败！请关注后续活动。
@@ -109,6 +106,7 @@
 
         <div>
             <button type="button" class="create_mood" ng-click = "creat_mood()" ng-show="isLogin&&timing">
+            <!--<button type="button" class="create_mood" ng-click = "creat_mood()" ng-disabled = "!(isLogin&&timing)">-->
                 <span class="glyphicon glyphicon-plus"></span>
                 创建足迹
             </button>
@@ -119,15 +117,15 @@
         </footer>
 
         <!--未登录用户弹框提示-->
-        <div id="prompt" class="prompt" ng-if="!isLogin">
+        <div id="prompt" class="prompt ng-cloak">
             <span class="close1" ng-click = "close1()">&times;</span>
             <div class="message">
                 <p>请在APP中登录后参与活动！</p>
             </div>
         </div>
         <!--网络请求错误提示用户-->
-        <div id="busy" class="prompt" ng-show = "err">
-            <span class="close1" ng-click = "close2()">&times;</span>
+        <div id="busy" class="prompt ng-cloak">
+            <span class="close1" ng-click = "close1()">&times;</span>
             <div class="message">
                 <p>网络繁忙，请稍后重试！</p>
             </div>
